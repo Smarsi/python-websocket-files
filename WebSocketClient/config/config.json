@@ -1,0 +1,4 @@
+{
+    "websocket_url": "ws://localhost:3000/ws/file",
+    "local_folder_to_watch_files": "./files"
+}
