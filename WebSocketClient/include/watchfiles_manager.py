@@ -25,11 +25,13 @@ class Handler(FileSystemEventHandler):
             # Envia o conteúdo binário do arquivo via WebSocket
             asyncio.run(self.ws_connection.send(file_content))
             print(f"Conteúdo do arquivo {file_path} enviado com sucesso!")
+
+
+            # Retire o comentário se quiser remover o arquivo depois de enviado
+            # os.remove(file_path)
         
         except Exception as e:
             print(f"Erro ao enviar arquivo pelo WebSocket: {e}")
-
-
 
 class Watcher:
     running: bool
